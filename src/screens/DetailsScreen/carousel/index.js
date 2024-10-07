@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import carousel from "../../../data/carousel";
+import carousel from "./images";
 import styles from "./index.styles";
 
 const Carousel = () => {

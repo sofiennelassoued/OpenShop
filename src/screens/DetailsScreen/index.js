@@ -5,7 +5,7 @@ import styles from "./index.styles";
 import { Feather } from "@expo/vector-icons";
 import ObtainButton from "./obtain";
 
-const DetailsScreen = () => {
+const DetailsScreen = ({ navigation }) => {
   return (
     <View style={styles.root}>
       {/* Top Bar */}
@@ -173,7 +173,7 @@ const DetailsScreen = () => {
             What we offer?
           </Text>
           <Text>
-            The deal includes options like a $20 voucher applicable to any menu
+            The offer includes options like a $20 voucher applicable to any menu
             item or delicious thin-crust pizzas in two sizes. Customers can
             choose between a 16-inch or an 18-inch pizza, each featuring two
             favorite toppings. Each option offers a unique way to enjoy classic

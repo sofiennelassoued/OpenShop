@@ -79,13 +79,14 @@ const HomeScreen = ({ navigation }) => {
       {/* Best Sellers Section */}
       <View style={styles.bestSellersContainer}>
         <View style={styles.bestSellersTitleContainer}>
-          <Text style={styles.h2}>Best Deals</Text>
+          <Text style={styles.h2}>Best Offers</Text>
           <Feather name="list" size={24} color="black" />
         </View>
         <FlatList
           data={products}
           renderItem={({ item }) => (
             <TouchableOpacity
+              key={item.id}
               style={{
                 flexDirection: "row",
                 marginTop: 20,
@@ -191,7 +192,10 @@ const HomeScreen = ({ navigation }) => {
                             color: "#4CAF50",
                           }}
                         >
-                          {(item.discounted / item.price) * 100}%
+                          {Math.round(
+                            100 - (item.discounted / item.price) * 100
+                          )}
+                          %
                         </Text>
                       </View>
                     </View>
@@ -214,7 +218,7 @@ const HomeScreen = ({ navigation }) => {
                         marginRight: 3,
                       }}
                     >
-                      120
+                      {item.points}
                     </Text>
                     <Feather name="smile" size={14} color="white" />
                   </View>
