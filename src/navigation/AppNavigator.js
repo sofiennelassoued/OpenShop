@@ -4,6 +4,7 @@ import HomeScreen from "../screens/HomeScreen/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import DiscoverScreen from "../screens/DiscoverScreen/DiscoverScreen";
+import DetailsScreen from "../screens/DetailsScreen";
 
 const AppNavigator = () => {
   const Stack = createStackNavigator();
@@ -11,8 +12,9 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="AuthScreen" component={AuthScreen} />
+        <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="AuthScreen" component={AuthScreen} />
         <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
       </Stack.Navigator>
     </NavigationContainer>

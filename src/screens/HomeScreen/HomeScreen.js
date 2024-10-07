@@ -92,6 +92,7 @@ const HomeScreen = ({ navigation }) => {
                 width: 180,
                 marginRight: 4,
               }}
+              onPress={() => navigation.navigate("DetailsScreen")}
             >
               <View>
                 {/* Product thumbnail */}
@@ -246,8 +247,8 @@ const styles = StyleSheet.create({
     marginTop: 15,
     paddingVertical: 9,
     paddingHorizontal: 15,
-    borderRadius: 7,
-    marginHorizontal: 15,
+    borderRadius: 30,
+    marginHorizontal: 8,
     marginBottom: 15,
   },
   bestSellersContainer: {

@@ -1,15 +1,15 @@
+import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
+import React from "react";
 import {
-  View,
-  Text,
+  FlatList,
   Image,
   StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
-  FlatList,
+  View,
 } from "react-native";
-import React from "react";
-import { MaterialCommunityIcons, AntDesign, Feather } from "@expo/vector-icons";
-import products from "../../data/products";
+import products from "../../data/data";
 
 const DiscoverScreen = ({ navigation }) => {
   return (
@@ -23,8 +23,8 @@ const DiscoverScreen = ({ navigation }) => {
         }}
       >
         {/* Back Button */}
-        <AntDessign
-          name="arrowleft"
+        <Feather
+          name="arrow-left"
           size={24}
           color="black"
           onPress={() => navigation.navigate("HomeScreen")}
@@ -32,9 +32,9 @@ const DiscoverScreen = ({ navigation }) => {
         {/* Page Title */}
         <Text style={{ alignSelf: "center", fontSize: 16 }}>Search</Text>
         {/* Empty View */}
-        <AntDesign
+        <Feather
           style={{ opacity: 0 }}
-          name="arrowleft"
+          name="arrow-left"
           size={24}
           color="black"
         />
@@ -114,7 +114,7 @@ const DiscoverScreen = ({ navigation }) => {
                         color="#FFBE5B"
                       />
                       <Text style={{ fontWeight: "700", marginLeft: 6 }}>
-                        {item.rating.rate}
+                        111
                       </Text>
                     </View>
                   </View>
