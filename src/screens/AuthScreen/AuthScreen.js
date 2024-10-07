@@ -1,15 +1,14 @@
+import { AntDesign } from "@expo/vector-icons";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
 import {
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
-  Animated,
 } from "react-native";
-import React from "react";
-import { AntDesign } from "@expo/vector-icons";
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 
 const AuthScreen = ({ navigation }) => {
   const SigninComponent = () => {
