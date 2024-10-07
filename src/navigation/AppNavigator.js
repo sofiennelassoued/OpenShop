@@ -12,9 +12,9 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="AuthScreen" component={AuthScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
         <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -78,9 +78,8 @@ const AuthScreen = ({ navigation }) => {
     <View style={styles.container}>
       {/* Replace this with your app logo */}
       <View style={{ flexDirection: "row" }}>
-        <Text style={{ fontSize: 32, fontWeight: 800 }}>Open</Text>
-        <Text style={{ fontSize: 32, fontWeight: 800, color: "#FF9900" }}>
-          Shop.
+        <Text style={{ fontSize: 32, fontWeight: 800, color: "#FF5722" }}>
+          Smilio
         </Text>
       </View>
 
