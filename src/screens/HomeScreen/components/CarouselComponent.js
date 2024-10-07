@@ -1,13 +1,13 @@
+import React, { useRef, useState } from "react";
 import {
-  View,
+  Dimensions,
   FlatList,
   Image,
-  Dimensions,
   Pressable,
   StyleSheet,
   TouchableOpacity,
+  View,
 } from "react-native";
-import React, { useState, useRef, useEffect } from "react";
 import carousel from "../../../data/carousel";
 const { width, height } = Dimensions.get("window");
 
@@ -67,7 +67,9 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
   },
   carouselImage: {
-    width,
+    borderRadius: 16,
+    marginLeft: 8,
+    width: width - 16,
     height: 170,
     marginVertical: 10,
   },

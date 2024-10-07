@@ -105,7 +105,7 @@ const DiscoverScreen = ({ navigation }) => {
                     }}
                   >
                     {/* Price */}
-                    <Text style={{ fontWeight: "700" }}>$ {item.price}</Text>
+                    <Text style={{ fontWeight: "" }}>$ {item.price}</Text>
                     {/* Ratings */}
                     <View style={{ flexDirection: "row" }}>
                       <MaterialCommunityIcons
@@ -114,7 +114,7 @@ const DiscoverScreen = ({ navigation }) => {
                         color="#FFBE5B"
                       />
                       <Text style={{ fontWeight: "700", marginLeft: 6 }}>
-                        {item.rating}
+                        {item.rating.rate}
                       </Text>
                     </View>
                   </View>
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
   },
   h2: {
     fontSize: 20,
-    fontWeight: 600,
+    fontWeight: "600",
   },
   thumbnail: {
     width: 120,
