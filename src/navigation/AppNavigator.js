@@ -1,22 +1,51 @@
-import React from "react";
-import AuthScreen from "../screens/AuthScreen/AuthScreen";
-import HomeScreen from "../screens/HomeScreen/HomeScreen";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import DiscoverScreen from "../screens/DiscoverScreen/DiscoverScreen";
+import React from "react";
 import DetailsScreen from "../screens/DetailsScreen";
+import DiscoverScreen from "../screens/DiscoverScreen/DiscoverScreen";
+import HomeScreen from "../screens/HomeScreen/HomeScreen";
+
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+const Home = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DetailsScreen"
+        component={DetailsScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
 
 const AppNavigator = () => {
-  const Stack = createStackNavigator();
-
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="AuthScreen" component={AuthScreen} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
-        <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Discover"
+          component={DiscoverScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={DiscoverScreen}
+          options={{ headerShown: false }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
