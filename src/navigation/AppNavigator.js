@@ -1,12 +1,13 @@
+import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 import DetailsScreen from "../screens/DetailsScreen";
-import MyCartScreen from "../screens/MyCartScreen/MyCartScreen";
 import HomeScreen from "../screens/HomeScreen/HomeScreen";
+import MyCartScreen from "../screens/MyCartScreen/MyCartScreen";
 import ProfileScreen from "../screens/ProfileScreen/ProfileScreen";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import DealScreen from "../screens/DealScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -28,6 +29,23 @@ const Home = () => {
   );
 };
 
+const MyCart = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="MyCartScreen"
+        component={MyCartScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DealScreen"
+        component={DealScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 const AppNavigator = () => {
   return (
     <NavigationContainer>
@@ -39,7 +57,7 @@ const AppNavigator = () => {
             headerShown: false,
             tabBarShowLabel: false,
             tabBarIcon: ({ focused, size }) => (
-              <MaterialCommunityIcons
+              <Feather
                 name="home"
                 color={focused ? "#FF5722" : "grey"}
                 size={size}
@@ -49,13 +67,13 @@ const AppNavigator = () => {
         />
         <Stack.Screen
           name="My Cart"
-          component={MyCartScreen}
+          component={MyCart}
           options={{
             headerShown: false,
             tabBarShowLabel: false,
             tabBarIcon: ({ focused, size }) => (
-              <MaterialCommunityIcons
-                name="cart"
+              <Feather
+                name="shopping-cart"
                 color={focused ? "#FF5722" : "grey"}
                 size={size}
               />
@@ -69,8 +87,8 @@ const AppNavigator = () => {
             headerShown: false,
             tabBarShowLabel: false,
             tabBarIcon: ({ focused, size }) => (
-              <MaterialCommunityIcons
-                name="account"
+              <Feather
+                name="user"
                 color={focused ? "#FF5722" : "grey"}
                 size={size}
               />

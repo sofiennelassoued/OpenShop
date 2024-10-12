@@ -12,6 +12,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import CarouselComponent from "./components/CarouselComponent";
 import products from "../../data/data";
+import { ORANGE } from "../../utils/colors";
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -26,39 +27,35 @@ const HomeScreen = ({ navigation }) => {
       >
         {/* Replace this with your app logo */}
         <View style={{ flexDirection: "row" }}>
-          <Text style={{ fontSize: 20, fontWeight: 800, color: "#FF5722" }}>
+          <Text style={{ fontSize: 20, fontWeight: 800, color: ORANGE }}>
             Smilio
           </Text>
         </View>
 
-        <View style={{ flexDirection: "row" }}>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
           {/* Account Button */}
-          <TouchableOpacity>
-            <MaterialCommunityIcons
-              name="account-circle-outline"
-              style={styles.iconButton}
-              size={24}
-              color="black"
-            />
-          </TouchableOpacity>
-          {/* Favorites Button */}
-          <TouchableOpacity>
-            <MaterialCommunityIcons
-              name="cards-heart-outline"
-              style={styles.iconButton}
-              size={24}
-              color="black"
-            />
-          </TouchableOpacity>
-          {/* Cart Button */}
-          <TouchableOpacity>
-            <MaterialCommunityIcons
-              name="cart-outline"
-              style={styles.iconButton}
-              size={24}
-              color="black"
-            />
-          </TouchableOpacity>
+          <Text style={{ fontWeight: "700", color: "gray", marginRight: 8 }}>My smiles</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              backgroundColor: "#FF5722",
+              alignItems: "center",
+              paddingVertical: 1,
+              paddingHorizontal: 10,
+              borderRadius: 12,
+            }}
+          >
+            <Text
+              style={{
+                fontWeight: "800",
+                color: "white",
+                marginRight: 3,
+              }}
+            >
+              200
+            </Text>
+            <Feather name="smile" size={14} color="white" />
+          </View>
         </View>
       </View>
 
@@ -207,7 +204,7 @@ const HomeScreen = ({ navigation }) => {
                       backgroundColor: "#FF5722",
                       alignItems: "center",
                       paddingVertical: 1,
-                      paddingHorizontal: 6,
+                      paddingHorizontal: 10,
                       borderRadius: 12,
                     }}
                   >

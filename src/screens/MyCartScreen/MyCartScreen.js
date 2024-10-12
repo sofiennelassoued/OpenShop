@@ -51,6 +51,7 @@ const MyCart = ({ navigation }) => {
       {/* Search Results */}
       <View style={styles.bestSellersContainer}>
         <FlatList
+          showsVerticalScrollIndicator={false}
           data={products}
           renderItem={({ item }) => (
             <View
@@ -62,7 +63,10 @@ const MyCart = ({ navigation }) => {
                 borderRadius: 10,
               }}
             >
-              <TouchableOpacity style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                style={{ flexDirection: "row" }}
+                onPress={() => navigation.navigate("DealScreen")}
+              >
                 {/* Product thumbnail */}
                 <Image
                   style={styles.thumbnail}

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { ORANGE } from "../../../utils/colors";
 
 const styles = StyleSheet.create({
   root: {
@@ -9,8 +10,9 @@ const styles = StyleSheet.create({
     bottom: 12,
     left: 8,
     borderRadius: 36,
-    borderWidth: 1,
-    borderColor: "#757575"
+    borderWidth: 2,
+    borderColor: ORANGE,
+    justifyContent: 'center'
   },
 });
 

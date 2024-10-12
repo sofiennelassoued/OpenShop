@@ -6,6 +6,9 @@ import { Feather } from "@expo/vector-icons";
 import ObtainButton from "./obtain";
 
 const DetailsScreen = ({ navigation }) => {
+  const handleOnPressObtain = () => {
+    navigation.navigate("MyCartScreen");
+  };
   return (
     <View style={styles.root}>
       {/* Top Bar */}
@@ -185,7 +188,7 @@ const DetailsScreen = ({ navigation }) => {
           </Text>
         </ScrollView>
       </View>
-      <ObtainButton />
+      <ObtainButton onPress={handleOnPressObtain} />
     </View>
   );
 };
