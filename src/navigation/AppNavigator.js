@@ -3,8 +3,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 import DetailsScreen from "../screens/DetailsScreen";
-import DiscoverScreen from "../screens/DiscoverScreen/DiscoverScreen";
+import MyCartScreen from "../screens/MyCartScreen/MyCartScreen";
 import HomeScreen from "../screens/HomeScreen/HomeScreen";
+import ProfileScreen from "../screens/ProfileScreen/ProfileScreen";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -33,17 +35,47 @@ const AppNavigator = () => {
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false,
+            tabBarShowLabel: false,
+            tabBarIcon: ({ focused, size }) => (
+              <MaterialCommunityIcons
+                name="home"
+                color={focused ? "#FF5722" : "grey"}
+                size={size}
+              />
+            ),
+          }}
         />
         <Stack.Screen
-          name="Discover"
-          component={DiscoverScreen}
-          options={{ headerShown: false }}
+          name="My Cart"
+          component={MyCartScreen}
+          options={{
+            headerShown: false,
+            tabBarShowLabel: false,
+            tabBarIcon: ({ focused, size }) => (
+              <MaterialCommunityIcons
+                name="cart"
+                color={focused ? "#FF5722" : "grey"}
+                size={size}
+              />
+            ),
+          }}
         />
         <Stack.Screen
           name="Profile"
-          component={DiscoverScreen}
-          options={{ headerShown: false }}
+          component={ProfileScreen}
+          options={{
+            headerShown: false,
+            tabBarShowLabel: false,
+            tabBarIcon: ({ focused, size }) => (
+              <MaterialCommunityIcons
+                name="account"
+                color={focused ? "#FF5722" : "grey"}
+                size={size}
+              />
+            ),
+          }}
         />
       </Tab.Navigator>
     </NavigationContainer>

@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import products from "../../data/data";
 
-const DiscoverScreen = ({ navigation }) => {
+const MyCart = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* Top Bar */}
@@ -30,7 +30,7 @@ const DiscoverScreen = ({ navigation }) => {
           onPress={() => navigation.navigate("HomeScreen")}
         />
         {/* Page Title */}
-        <Text style={{ alignSelf: "center", fontSize: 16 }}>Search</Text>
+        <Text style={{ alignSelf: "center", fontSize: 16 }}>My Cart</Text>
         {/* Empty View */}
         <Feather
           style={{ opacity: 0 }}
@@ -143,7 +143,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingVertical: 9,
     paddingHorizontal: 15,
-    borderRadius: 7,
+    marginHorizontal: -8,
+    borderRadius: 30,
     marginBottom: 15,
   },
   bestSellersContainer: {
@@ -162,4 +163,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DiscoverScreen;
+export default MyCart;
