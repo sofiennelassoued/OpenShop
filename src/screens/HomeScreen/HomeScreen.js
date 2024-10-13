@@ -28,7 +28,7 @@ const HomeScreen = ({ navigation }) => {
         {/* Replace this with your app logo */}
         <View style={{ flexDirection: "row" }}>
           <Text style={{ fontSize: 20, fontWeight: 800, color: ORANGE }}>
-            Smilio
+            Hapito
           </Text>
         </View>
 
