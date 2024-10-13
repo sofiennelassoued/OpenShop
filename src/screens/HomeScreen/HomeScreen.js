@@ -1,18 +1,18 @@
+import { Feather } from "@expo/vector-icons";
+import React from "react";
 import {
-  View,
-  Text,
+  FlatList,
+  Image,
   StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
-  Image,
-  FlatList,
+  View,
 } from "react-native";
-import React from "react";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Feather } from "@expo/vector-icons";
-import CarouselComponent from "./components/CarouselComponent";
 import products from "../../data/data";
 import { ORANGE } from "../../utils/colors";
+import CarouselComponent from "./components/CarouselComponent";
+import Categories from "./components/categories";
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -34,7 +34,9 @@ const HomeScreen = ({ navigation }) => {
 
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           {/* Account Button */}
-          <Text style={{ fontWeight: "700", color: "gray", marginRight: 8 }}>My smiles</Text>
+          <Text style={{ fontWeight: "700", color: "gray", marginRight: 8 }}>
+            My smiles
+          </Text>
           <View
             style={{
               flexDirection: "row",
@@ -70,9 +72,9 @@ const HomeScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
 
-      {/* Banners Carousel */}
-      <CarouselComponent />
+      <Categories />
 
+   
       {/* Best Sellers Section */}
       <View style={styles.bestSellersContainer}>
         <View style={styles.bestSellersTitleContainer}>
@@ -227,6 +229,7 @@ const HomeScreen = ({ navigation }) => {
           showsHorizontalScrollIndicator={false}
         />
       </View>
+      <CarouselComponent />
     </View>
   );
 };
@@ -254,7 +257,6 @@ const styles = StyleSheet.create({
   },
   bestSellersContainer: {
     flexDirection: "column",
-    marginTop: 50,
     padding: 12,
     paddingRight: 0,
   },

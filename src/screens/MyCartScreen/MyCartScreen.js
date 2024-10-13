@@ -153,7 +153,6 @@ const styles = StyleSheet.create({
   },
   bestSellersContainer: {
     flexDirection: "column",
-    padding: 15,
   },
   h2: {
     fontSize: 20,

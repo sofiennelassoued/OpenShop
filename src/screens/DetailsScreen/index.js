@@ -1,8 +1,8 @@
+import { Feather } from "@expo/vector-icons";
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
 import Carousel from "./carousel";
 import styles from "./index.styles";
-import { Feather } from "@expo/vector-icons";
 import ObtainButton from "./obtain";
 
 const DetailsScreen = ({ navigation }) => {
@@ -35,13 +35,7 @@ const DetailsScreen = ({ navigation }) => {
           }}
         >
           {/* Page Title */}
-          <Text
-            style={{
-              fontSize: 16,
-            }}
-          >
-            Search
-          </Text>
+          <Feather name="heart" color="gray" size={24} />
         </View>
       </View>
       <Carousel />

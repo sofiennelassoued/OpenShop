@@ -44,13 +44,7 @@ const DealScreen = ({ navigation }) => {
             }}
           >
             {/* Page Title */}
-            <Text
-              style={{
-                fontSize: 16,
-              }}
-            >
-              Search
-            </Text>
+            <Feather name="heart" color="gray" size={24} />
           </View>
         </View>
         <Carousel />
