@@ -63,7 +63,7 @@ const HomeScreen = ({ navigation }) => {
 
       {/* Search Section */}
       <View style={styles.SearchBar}>
-        <TextInput placeholder="Search for a product.." style={{ flex: 1 }} />
+        <TextInput placeholder="Search for an offer.." style={{ flex: 1 }} />
         <TouchableOpacity
           style={{ flex: 0 }}
           onPress={() => navigation.navigate("DiscoverScreen")}

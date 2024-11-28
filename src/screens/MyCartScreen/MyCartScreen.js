@@ -42,7 +42,7 @@ const MyCart = ({ navigation }) => {
 
       {/* Search Bar */}
       <View style={styles.SearchBar}>
-        <TextInput placeholder="Search for a product.." style={{ flex: 1 }} />
+        <TextInput placeholder="Search for an offer.." style={{ flex: 1 }} />
         <TouchableOpacity style={{ flex: 0 }}>
           <Feather name="search" size={24} color="grey" />
         </TouchableOpacity>
